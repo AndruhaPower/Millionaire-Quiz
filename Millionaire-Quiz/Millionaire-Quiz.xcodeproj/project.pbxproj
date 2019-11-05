@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBD2371DF530067E33C /* AppDelegate.swift */; };
+		49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBF2371DF530067E33C /* SceneDelegate.swift */; };
+		49DF9EC22371DF530067E33C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EC12371DF530067E33C /* ViewController.swift */; };
+		49DF9EC52371DF530067E33C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DF9EC32371DF530067E33C /* Main.storyboard */; };
+		49DF9EC82371DF530067E33C /* Millionaire_Quiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EC62371DF530067E33C /* Millionaire_Quiz.xcdatamodeld */; };
+		49DF9ECA2371DF550067E33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DF9EC92371DF550067E33C /* Assets.xcassets */; };
+		49DF9ECD2371DF550067E33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49DF9EBA2371DF530067E33C /* Millionaire-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Millionaire-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DF9EBD2371DF530067E33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49DF9EBF2371DF530067E33C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49DF9EC12371DF530067E33C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49DF9EC42371DF530067E33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49DF9EC72371DF530067E33C /* Millionaire_Quiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Millionaire_Quiz.xcdatamodel; sourceTree = "<group>"; };
+		49DF9EC92371DF550067E33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49DF9ECC2371DF550067E33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49DF9ECE2371DF550067E33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49DF9EB72371DF530067E33C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49DF9EB12371DF530067E33C = {
+			isa = PBXGroup;
+			children = (
+				49DF9EBC2371DF530067E33C /* Millionaire-Quiz */,
+				49DF9EBB2371DF530067E33C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49DF9EBB2371DF530067E33C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49DF9EBA2371DF530067E33C /* Millionaire-Quiz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49DF9EBC2371DF530067E33C /* Millionaire-Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				49DF9EBD2371DF530067E33C /* AppDelegate.swift */,
+				49DF9EBF2371DF530067E33C /* SceneDelegate.swift */,
+				49DF9EC12371DF530067E33C /* ViewController.swift */,
+				49DF9EC32371DF530067E33C /* Main.storyboard */,
+				49DF9EC92371DF550067E33C /* Assets.xcassets */,
+				49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */,
+				49DF9ECE2371DF550067E33C /* Info.plist */,
+				49DF9EC62371DF530067E33C /* Millionaire_Quiz.xcdatamodeld */,
+			);
+			path = "Millionaire-Quiz";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49DF9EB92371DF530067E33C /* Millionaire-Quiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49DF9ED12371DF550067E33C /* Build configuration list for PBXNativeTarget "Millionaire-Quiz" */;
+			buildPhases = (
+				49DF9EB62371DF530067E33C /* Sources */,
+				49DF9EB72371DF530067E33C /* Frameworks */,
+				49DF9EB82371DF530067E33C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Millionaire-Quiz";
+			productName = "Millionaire-Quiz";
+			productReference = 49DF9EBA2371DF530067E33C /* Millionaire-Quiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49DF9EB22371DF530067E33C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Andrew;
+				TargetAttributes = {
+					49DF9EB92371DF530067E33C = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 49DF9EB52371DF530067E33C /* Build configuration list for PBXProject "Millionaire-Quiz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49DF9EB12371DF530067E33C;
+			productRefGroup = 49DF9EBB2371DF530067E33C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49DF9EB92371DF530067E33C /* Millionaire-Quiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49DF9EB82371DF530067E33C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DF9ECD2371DF550067E33C /* LaunchScreen.storyboard in Resources */,
+				49DF9ECA2371DF550067E33C /* Assets.xcassets in Resources */,
+				49DF9EC52371DF530067E33C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49DF9EB62371DF530067E33C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DF9EC22371DF530067E33C /* ViewController.swift in Sources */,
+				49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */,
+				49DF9EC82371DF530067E33C /* Millionaire_Quiz.xcdatamodeld in Sources */,
+				49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49DF9EC32371DF530067E33C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49DF9EC42371DF530067E33C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49DF9ECC2371DF550067E33C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49DF9ECF2371DF550067E33C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49DF9ED02371DF550067E33C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49DF9ED22371DF550067E33C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FZ2C7K9LV;
+				INFOPLIST_FILE = "Millionaire-Quiz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ZHUKOV.Millionaire-Quiz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49DF9ED32371DF550067E33C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FZ2C7K9LV;
+				INFOPLIST_FILE = "Millionaire-Quiz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ZHUKOV.Millionaire-Quiz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49DF9EB52371DF530067E33C /* Build configuration list for PBXProject "Millionaire-Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DF9ECF2371DF550067E33C /* Debug */,
+				49DF9ED02371DF550067E33C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49DF9ED12371DF550067E33C /* Build configuration list for PBXNativeTarget "Millionaire-Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DF9ED22371DF550067E33C /* Debug */,
+				49DF9ED32371DF550067E33C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49DF9EC62371DF530067E33C /* Millionaire_Quiz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49DF9EC72371DF530067E33C /* Millionaire_Quiz.xcdatamodel */,
+			);
+			currentVersion = 49DF9EC72371DF530067E33C /* Millionaire_Quiz.xcdatamodel */;
+			path = Millionaire_Quiz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49DF9EB22371DF530067E33C /* Project object */;
+}
