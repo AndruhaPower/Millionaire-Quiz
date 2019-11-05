@@ -8,13 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    private var operationQueue = OperationQueue()
+    var customView = CustomMainView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.setupView()
     }
-
-
+    
+    func setupView() {
+        
+        self.customView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(customView)
+        
+        NSLayoutConstraint.activate([
+            self.customView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.customView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.customView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.customView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+        
+        self.getImage(url: self.customView.imageURL) { (image) in
+            self.customView.imageView.image = image
+        }
+    }
+    
+    func getImage(url: String, completion: @escaping (UIImage)->()) {
+        let operation = LoadImageOperation()
+        operation.url = URL(string: url)
+        self.operationQueue.addOperation(operation)
+        operation.completion = { image in
+            completion(image)
+        }
+    }
 }
 
