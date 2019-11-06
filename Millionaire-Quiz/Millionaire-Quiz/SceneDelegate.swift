@@ -20,8 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        let navigationController = UINavigationController(rootViewController: MainViewController())
+        navigationController.navigationBar.isTranslucent = true
         window?.windowScene = windowScene
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

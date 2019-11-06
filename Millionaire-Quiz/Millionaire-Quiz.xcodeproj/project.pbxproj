@@ -15,6 +15,11 @@
 		49DF9ECD2371DF550067E33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */; };
 		49DF9ED52371FD140067E33C /* CustomMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9ED42371FD140067E33C /* CustomMainView.swift */; };
 		49DF9ED7237205280067E33C /* LoadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9ED6237205280067E33C /* LoadImageOperation.swift */; };
+		49DF9ED923734B710067E33C /* QuestionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9ED823734B710067E33C /* QuestionStruct.swift */; };
+		49DF9EDB23734C310067E33C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EDA23734C310067E33C /* GameViewController.swift */; };
+		49DF9EDD23734C460067E33C /* CustomGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EDC23734C460067E33C /* CustomGameView.swift */; };
+		49DF9EDF2373553C0067E33C /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EDE2373553C0067E33C /* RecordsViewController.swift */; };
+		49DF9EE12373567C0067E33C /* CustomAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EE02373567C0067E33C /* CustomAnswerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		49DF9ECE2371DF550067E33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49DF9ED42371FD140067E33C /* CustomMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainView.swift; sourceTree = "<group>"; };
 		49DF9ED6237205280067E33C /* LoadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageOperation.swift; sourceTree = "<group>"; };
+		49DF9ED823734B710067E33C /* QuestionStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStruct.swift; sourceTree = "<group>"; };
+		49DF9EDA23734C310067E33C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		49DF9EDC23734C460067E33C /* CustomGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGameView.swift; sourceTree = "<group>"; };
+		49DF9EDE2373553C0067E33C /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		49DF9EE02373567C0067E33C /* CustomAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnswerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +73,12 @@
 				49DF9EBD2371DF530067E33C /* AppDelegate.swift */,
 				49DF9EBF2371DF530067E33C /* SceneDelegate.swift */,
 				49DF9EC12371DF530067E33C /* MainViewController.swift */,
+				49DF9EDA23734C310067E33C /* GameViewController.swift */,
+				49DF9EDE2373553C0067E33C /* RecordsViewController.swift */,
+				49DF9ED823734B710067E33C /* QuestionStruct.swift */,
+				49DF9EE02373567C0067E33C /* CustomAnswerButton.swift */,
 				49DF9ED42371FD140067E33C /* CustomMainView.swift */,
+				49DF9EDC23734C460067E33C /* CustomGameView.swift */,
 				49DF9ED6237205280067E33C /* LoadImageOperation.swift */,
 				49DF9EC92371DF550067E33C /* Assets.xcassets */,
 				49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */,
@@ -143,12 +158,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF9ED923734B710067E33C /* QuestionStruct.swift in Sources */,
+				49DF9EDD23734C460067E33C /* CustomGameView.swift in Sources */,
 				49DF9ED52371FD140067E33C /* CustomMainView.swift in Sources */,
 				49DF9EC22371DF530067E33C /* MainViewController.swift in Sources */,
 				49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */,
+				49DF9EDB23734C310067E33C /* GameViewController.swift in Sources */,
 				49DF9ED7237205280067E33C /* LoadImageOperation.swift in Sources */,
 				49DF9EC82371DF530067E33C /* Millionaire_Quiz.xcdatamodeld in Sources */,
 				49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */,
+				49DF9EDF2373553C0067E33C /* RecordsViewController.swift in Sources */,
+				49DF9EE12373567C0067E33C /* CustomAnswerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,9 @@ class MainViewController: UIViewController {
         
         self.getImage(url: self.customView.imageURL) { (image) in
             self.customView.imageView.image = image
-        }
+         }
+        self.customView.startGameButton.addTarget(self, action: #selector(self.startGameButtonClicked), for: .touchUpInside)
+        self.customView.recordsButton.addTarget(self, action: #selector(self.recordsButtonClicked), for: .touchUpInside)
     }
     
     func getImage(url: String, completion: @escaping (UIImage)->()) {
@@ -42,6 +44,16 @@ class MainViewController: UIViewController {
         operation.completion = { image in
             completion(image)
         }
+    }
+    
+    @objc func startGameButtonClicked() {
+        let gameviewcontroller = GameViewController()
+        self.navigationController?.pushViewController(gameviewcontroller, animated: true)
+    }
+    
+    @objc func recordsButtonClicked() {
+        let recordsViewController = RecordsViewController()
+        self.navigationController?.pushViewController(recordsViewController, animated: true)
     }
 }
 
