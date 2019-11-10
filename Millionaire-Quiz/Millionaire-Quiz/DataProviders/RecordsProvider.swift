@@ -25,9 +25,7 @@ final class RecordCaretaker {
     }
     
     func retrieveRecords() -> [GameSession] {
-        guard let data = UserDefaults.standard.data(forKey: key) else {
-            return []
-        }
+        guard let data = UserDefaults.standard.data(forKey: key) else { return [] }
         do {
             return try self.decoder.decode([GameSession].self, from: data)
         } catch {

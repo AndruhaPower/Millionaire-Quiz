@@ -34,6 +34,6 @@ class Game: GameViewControllerDelegate {
         guard let gameSession = self.gameSession else { return }
         Game.shared.records.append(gameSession)
         
-        self.gameSession = nil 
+        self.gameSession = nil
     }
 }
