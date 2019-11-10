@@ -10,10 +10,12 @@ import UIKit
 
 class CustomMainView: UIView {
     
+    let items: [String] = ["Section 1", "Section 2"]
     var imageView = UIImageView()
     var startGameButton = UIButton()
     var recordsButton = UIButton()
     var highestScore = UILabel()
+    var segmentedControl = UISegmentedControl()
     
     var imageURL: String = "https://static.1tv.ru/uploads/project/logo_image/2017/08/23/322/_original/322_c144e2880b.png"
     
@@ -26,8 +28,26 @@ class CustomMainView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func configureView() {
+        let items: [String] = ["Последовательно", "Вперемешку"]
+        let segmentedControl = UISegmentedControl(items: items)
+        self.segmentedControl = segmentedControl
+        
+        self.segmentedControl.selectedSegmentIndex = 0
+        self.segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.segmentedControl)
+        self.segmentedControl.selectedSegmentTintColor = .darkGray
+        self.segmentedControl.backgroundColor = .black
+        self.segmentedControl.tintColor = .white
+
+        
+        NSLayoutConstraint.activate([
+            self.segmentedControl.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            self.segmentedControl.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.segmentedControl.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.segmentedControl.heightAnchor.constraint(equalToConstant: 30)
+        ])
         
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.imageView)
@@ -37,7 +57,7 @@ class CustomMainView: UIView {
             self.imageView.widthAnchor.constraint(equalToConstant: 500),
             self.imageView.heightAnchor.constraint(equalToConstant: 300),
             self.imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100)
+            self.imageView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 70)
         ])
         
         self.startGameButton.translatesAutoresizingMaskIntoConstraints = false

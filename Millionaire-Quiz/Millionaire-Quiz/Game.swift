@@ -17,6 +17,7 @@ class Game: GameViewControllerDelegate {
     }()
     
     private init() {
+        self.recordCaretaker.clearRecords()
         self.records = self.recordCaretaker.retrieveRecords()
     }
     

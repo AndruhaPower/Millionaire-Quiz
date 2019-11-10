@@ -18,6 +18,17 @@ class MainViewController: UIViewController {
         self.setupView()
     }
     
+    private var selectedDifficulty: Difficulty {
+        switch self.customView.segmentedControl.selectedSegmentIndex {
+        case 0:
+            return .straightForward
+        case 1:
+            return .allRandom
+        default:
+            return .straightForward
+        }
+    }
+    
     func setupView() {
         
         self.customView.translatesAutoresizingMaskIntoConstraints = false
@@ -50,7 +61,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func startGameButtonClicked() {
-        let gameviewcontroller = GameViewController()
+        let gameviewcontroller = GameViewController(difficulty: self.selectedDifficulty)
         self.navigationController?.pushViewController(gameviewcontroller, animated: true)
     }
     

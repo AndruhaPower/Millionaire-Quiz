@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class CustomAnswerButton: UIButton {
     
     var answer: String?

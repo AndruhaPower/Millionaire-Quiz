@@ -13,6 +13,7 @@ protocol GameViewControllerDelegate {
 }
 class GameViewController: UIViewController {
     
+    var difficulty: Difficulty
     let totalQuestions: Float = 10
     var gameDelegate: GameViewControllerDelegate = Game.shared
     let operationQueue = OperationQueue()
@@ -21,10 +22,29 @@ class GameViewController: UIViewController {
     var customView = CustomGameView()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         self.configureView()
     }
+    
+    init(difficulty: Difficulty) {
+        self.difficulty = difficulty
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private var questionStrategy: QuestionStrategy {
+        switch difficulty {
+        case .straightForward:
+            return StraightForwardQuestionStrategy()
+        case .allRandom:
+            return RandomQuestionsStrategy()
+        }
+    }
+    
+    var questions = [Question]()
     
     @objc private func checkAnswer(sender: CustomAnswerButton) {
         
@@ -75,6 +95,7 @@ class GameViewController: UIViewController {
     }
     
     private func configureView() {
+
         
         self.customView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(customView)
@@ -90,8 +111,9 @@ class GameViewController: UIViewController {
             self.customView.backgroundImage.image = image
         }
         self.view.backgroundColor = .systemIndigo
-        self.configureQuestion(question: self.questions[0])
         self.configureButtons()
+        self.questions = questionStrategy.createArray(questions: QuestionData.getAllQuestions())
+        self.configureQuestion(question: self.questions[0])
     }
     
     private func configureQuestion(question: Question) {
@@ -117,37 +139,4 @@ class GameViewController: UIViewController {
         three.addTarget(self, action: #selector(checkAnswer(sender:)), for: .touchUpInside)
         four.addTarget(self, action: #selector(checkAnswer(sender:)), for: .touchUpInside)
     }
-    
-    var questions: [Question] =
-        [Question(question: "Какой элемент есть в конструкции башенного крана?"
-            , answers: ["Стрела", "Копье", "Дротик", "Бумеранг"]
-            , correctAnswer: "Стрела"),
-         Question(question: "У каких животных шерсть растет в необычном направлении - от брюха к спине?"
-            , answers: ["У панд", "У коал", "У ленивцев", "У кенгуру"]
-            , correctAnswer: "У ленивцев"),
-         Question(question: "В какой стране был построен ледокол Ермак?"
-            , answers: ["Россия", "Великобритания", "Германия", "Нидерланды"]
-            , correctAnswer: "Великобритания"),
-         Question(question: "Как называют щелчок компьютерной мыши?"
-            , answers: ["клац", "клик", "бумс", "дзынь"]
-            , correctAnswer: "клик"),
-         Question(question: "Cколько человек в струнном оркестре?"
-            , answers: ["3", "4", "5", "6"]
-            , correctAnswer: "4"),
-         Question(question: "Какого сына не было у российского имератора Николая I?"
-            , answers: ["Петр", "Александр", "Николай", "Константин"]
-            , correctAnswer: "Петр"),
-         Question(question: "Что понадобиться чтобы взрыхлить землю на грядке?"
-            , answers: ["бабка", "тряпка", "скобка", "тяпка"]
-            , correctAnswer: "тяпка"),
-         Question(question: "Во что превращается гусеница?"
-            , answers: ["В мячик", "В пирамидку", "В машинку", "В куколку"]
-            , correctAnswer: "В куколку"),
-         Question(question: "В какой басне Крылова среди действующих лиц есть человек?"
-            , answers: ["Лягушка и Вол", "Свинья под Дубом", "Волк на псарне", "Осел и Соловей"]
-            , correctAnswer: "Волк на псарне"),
-         Question(question: "Какой фильм сделал знаменитой песню в исполнении Уитни Хьюстон?"
-            , answers: ["Телохранитель", "Форест Гамп", "Пятый Элемент", "Красотка"]
-            , correctAnswer: "Телохранитель")
-    ]
 }
