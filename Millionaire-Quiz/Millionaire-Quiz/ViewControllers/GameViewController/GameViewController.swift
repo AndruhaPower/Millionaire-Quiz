@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol GameViewControllerDelegate {
+    func didEndGameWithResult(result: Int, date: Date, percent: Float)
+}
 class GameViewController: UIViewController {
     
+    let totalQuestions: Float = 10
+    var gameDelegate: GameViewControllerDelegate = Game.shared
     let operationQueue = OperationQueue()
     var correctAnswers: Int = 0
     let backGroundImageURL: String = "https://wallpaperbro.com/img/570735.jpg"
@@ -25,7 +30,7 @@ class GameViewController: UIViewController {
         
         guard let currentQuestion = self.questions.first(where: { qst -> Bool in
             return qst.question == self.customView.questionLabel.text
-        }) else { self.navigationController?.popViewController(animated: true); return}
+        }) else { self.saveAndQuit() ; return}
         if sender.currentTitle == currentQuestion.correctAnswer {
             self.questions.removeAll { qst -> Bool in
                 return qst.question == self.customView.questionLabel.text
@@ -35,10 +40,10 @@ class GameViewController: UIViewController {
         } else {
             sender.backgroundColor = .red
             guard self.correctAnswers > 0 else {
-                self.navigationController?.popViewController(animated: true)
+                self.saveAndQuit()
                 return
             }
-            self.navigationController?.popViewController(animated: true)        //TO-DO
+            self.saveAndQuit()
         }
     }
     
@@ -54,6 +59,19 @@ class GameViewController: UIViewController {
         operation.completion = { image in
             completion(image)
         }
+    }
+    
+    private func saveAndQuit() {
+        var percent: Float = 0
+        guard self.correctAnswers > 0 else {
+            percent = 100
+            self.gameDelegate.didEndGameWithResult(result: self.correctAnswers, date: Date(), percent: percent)
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+        percent = Float(self.correctAnswers) / self.totalQuestions * 100
+        self.gameDelegate.didEndGameWithResult(result: self.correctAnswers, date: Date(), percent: percent)
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func configureView() {

@@ -73,9 +73,9 @@ class CustomMainView: UIView {
             self.highestScore.heightAnchor.constraint(equalToConstant: 45),
             self.highestScore.widthAnchor.constraint(greaterThanOrEqualToConstant: 250)
         ])
-        
+    
         self.highestScore.textAlignment = .center
-        self.highestScore.text = "Рекорд за все время: 0"
+        self.highestScore.text = ""
         self.highestScore.alpha = 0.3
         self.highestScore.textColor = .white
         self.highestScore.backgroundColor = .black

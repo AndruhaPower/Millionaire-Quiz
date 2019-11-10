@@ -35,6 +35,9 @@ class MainViewController: UIViewController {
          }
         self.customView.startGameButton.addTarget(self, action: #selector(self.startGameButtonClicked), for: .touchUpInside)
         self.customView.recordsButton.addTarget(self, action: #selector(self.recordsButtonClicked), for: .touchUpInside)
+        
+        let lastRecord = Game.shared.records.last
+        self.customView.highestScore.text = "Рекорд за все время: \(lastRecord?.score ?? 0)"
     }
     
     func getImage(url: String, completion: @escaping (UIImage)->()) {
