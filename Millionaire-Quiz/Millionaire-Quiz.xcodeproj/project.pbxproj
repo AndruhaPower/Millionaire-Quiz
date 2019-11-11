@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495488792379FF970026A8B6 /* CreateQuestionCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */; };
 		49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBD2371DF530067E33C /* AppDelegate.swift */; };
 		49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBF2371DF530067E33C /* SceneDelegate.swift */; };
 		49DF9EC22371DF530067E33C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EC12371DF530067E33C /* MainViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionCustomView.swift; sourceTree = "<group>"; };
 		49DF9EBA2371DF530067E33C /* Millionaire-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Millionaire-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DF9EBD2371DF530067E33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DF9EBF2371DF530067E33C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				49E9E9312379E4AF00F91B64 /* CreateQuestionViewController.swift */,
+				495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */,
 			);
 			path = CreateQuestionViewController;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				49F954012378C625002A1AC8 /* RandomQuestionStrategy.swift in Sources */,
 				49DF9EE523749C010067E33C /* GameSession.swift in Sources */,
 				49DF9EE323749BEC0067E33C /* Game.swift in Sources */,
+				495488792379FF970026A8B6 /* CreateQuestionCustomView.swift in Sources */,
 				49DF9EC82371DF530067E33C /* Millionaire_Quiz.xcdatamodeld in Sources */,
 				49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */,
 				49DF9EDF2373553C0067E33C /* RecordsViewController.swift in Sources */,
