@@ -11,23 +11,24 @@ import Foundation
 
 class Game: GameViewControllerDelegate {
     
+    private let recordCaretaker = RecordCaretaker()
+    var selectedDifficulty: Difficulty = .allRandom
+    
     static let shared: Game = {
         let instance = Game()
         return instance
     }()
-    
-    private init() {
-        self.recordCaretaker.clearRecords()
-        self.records = self.recordCaretaker.retrieveRecords()
-    }
-    
-    private let recordCaretaker = RecordCaretaker()
     
     var gameSession: GameSession?
     private(set) var records: [GameSession] {
         didSet {
             self.recordCaretaker.save(records: self.records)
         }
+    }
+    
+    private init() {
+        self.recordCaretaker.clearRecords()
+        self.records = self.recordCaretaker.retrieveRecords()
     }
     
     func didEndGameWithResult(result: Int, date: Date, percent: Float) {

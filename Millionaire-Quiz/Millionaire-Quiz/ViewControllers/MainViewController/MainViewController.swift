@@ -12,25 +12,15 @@ class MainViewController: UIViewController {
     
     private var operationQueue = OperationQueue()
     var customView = CustomMainView()
-
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.setupView()
     }
     
-    private var selectedDifficulty: Difficulty {
-        switch self.customView.segmentedControl.selectedSegmentIndex {
-        case 0:
-            return .straightForward
-        case 1:
-            return .allRandom
-        default:
-            return .straightForward
-        }
-    }
-    
     func setupView() {
-        
+
         self.customView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(customView)
         
@@ -46,6 +36,7 @@ class MainViewController: UIViewController {
          }
         self.customView.startGameButton.addTarget(self, action: #selector(self.startGameButtonClicked), for: .touchUpInside)
         self.customView.recordsButton.addTarget(self, action: #selector(self.recordsButtonClicked), for: .touchUpInside)
+        self.customView.settingsButton.addTarget(self, action: #selector(self.settingsButtonClicked), for: .touchUpInside)
         
         let lastRecord = Game.shared.records.last
         self.customView.highestScore.text = "Рекорд за все время: \(lastRecord?.score ?? 0)"
@@ -61,13 +52,18 @@ class MainViewController: UIViewController {
     }
     
     @objc func startGameButtonClicked() {
-        let gameviewcontroller = GameViewController(difficulty: self.selectedDifficulty)
+        let gameviewcontroller = GameViewController(difficulty: Game.shared.selectedDifficulty)
         self.navigationController?.pushViewController(gameviewcontroller, animated: true)
     }
     
     @objc func recordsButtonClicked() {
         let recordsViewController = RecordsViewController()
         self.navigationController?.pushViewController(recordsViewController, animated: true)
+    }
+    
+    @objc func settingsButtonClicked() {
+        let settingsViewController = SettingsViewController()
+        self.navigationController?.pushViewController(settingsViewController, animated: true)
     }
 }
 

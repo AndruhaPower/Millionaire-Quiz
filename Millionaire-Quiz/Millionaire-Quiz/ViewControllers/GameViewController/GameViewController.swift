@@ -11,10 +11,11 @@ import UIKit
 protocol GameViewControllerDelegate {
     func didEndGameWithResult(result: Int, date: Date, percent: Float)
 }
+
 class GameViewController: UIViewController {
     
     var difficulty: Difficulty
-    let totalQuestions: Float = 10
+    let totalQuestions: Int = QuestionData.questions.count
     var gameDelegate: GameViewControllerDelegate = Game.shared
     let operationQueue = OperationQueue()
     var correctAnswers: Int = 0
@@ -89,14 +90,13 @@ class GameViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        percent = Float(self.correctAnswers) / self.totalQuestions * 100
+        percent = Float(self.correctAnswers) / Float(self.totalQuestions) * 100
         self.gameDelegate.didEndGameWithResult(result: self.correctAnswers, date: Date(), percent: percent)
         self.navigationController?.popViewController(animated: true)
     }
     
     private func configureView() {
 
-        
         self.customView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(customView)
         

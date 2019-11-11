@@ -23,6 +23,9 @@
 		49DF9EE323749BEC0067E33C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EE223749BEB0067E33C /* Game.swift */; };
 		49DF9EE523749C010067E33C /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EE423749C010067E33C /* GameSession.swift */; };
 		49DF9EE72374A4530067E33C /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EE62374A4530067E33C /* RecordsProvider.swift */; };
+		49E9E92D2379DD2800F91B64 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9E92C2379DD2800F91B64 /* SettingsViewController.swift */; };
+		49E9E92F2379DE0800F91B64 /* SettingsCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9E92E2379DE0800F91B64 /* SettingsCustomView.swift */; };
+		49E9E9322379E4AF00F91B64 /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E9E9312379E4AF00F91B64 /* CreateQuestionViewController.swift */; };
 		49F953FE2378C550002A1AC8 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F953FD2378C550002A1AC8 /* Difficulty.swift */; };
 		49F954012378C625002A1AC8 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F954002378C625002A1AC8 /* RandomQuestionStrategy.swift */; };
 		49F954032378C941002A1AC8 /* StraightForwardQuestionStratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F954022378C941002A1AC8 /* StraightForwardQuestionStratery.swift */; };
@@ -48,6 +51,9 @@
 		49DF9EE223749BEB0067E33C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		49DF9EE423749C010067E33C /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		49DF9EE62374A4530067E33C /* RecordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsProvider.swift; sourceTree = "<group>"; };
+		49E9E92C2379DD2800F91B64 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		49E9E92E2379DE0800F91B64 /* SettingsCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCustomView.swift; sourceTree = "<group>"; };
+		49E9E9312379E4AF00F91B64 /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
 		49F953FD2378C550002A1AC8 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		49F954002378C625002A1AC8 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 		49F954022378C941002A1AC8 /* StraightForwardQuestionStratery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraightForwardQuestionStratery.swift; sourceTree = "<group>"; };
@@ -71,6 +77,8 @@
 				490843E72378A9030017E4D3 /* MainViewController */,
 				490843E82378A9090017E4D3 /* GameViewController */,
 				490843E92378A9130017E4D3 /* RecordsViewController */,
+				49E9E9302379E44300F91B64 /* SettingsViewController */,
+				49E9E9332379E4B300F91B64 /* CreateQuestionViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +172,23 @@
 			path = "Millionaire-Quiz";
 			sourceTree = "<group>";
 		};
+		49E9E9302379E44300F91B64 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				49E9E92C2379DD2800F91B64 /* SettingsViewController.swift */,
+				49E9E92E2379DE0800F91B64 /* SettingsCustomView.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		49E9E9332379E4B300F91B64 /* CreateQuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				49E9E9312379E4AF00F91B64 /* CreateQuestionViewController.swift */,
+			);
+			path = CreateQuestionViewController;
+			sourceTree = "<group>";
+		};
 		49F953FF2378C5FC002A1AC8 /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,12 +270,15 @@
 			files = (
 				49DF9ED923734B710067E33C /* QuestionStruct.swift in Sources */,
 				49F954052378CF4A002A1AC8 /* QuestionsData.swift in Sources */,
+				49E9E92F2379DE0800F91B64 /* SettingsCustomView.swift in Sources */,
 				49DF9EDD23734C460067E33C /* CustomGameView.swift in Sources */,
 				49F953FE2378C550002A1AC8 /* Difficulty.swift in Sources */,
 				49DF9ED52371FD140067E33C /* CustomMainView.swift in Sources */,
+				49E9E92D2379DD2800F91B64 /* SettingsViewController.swift in Sources */,
 				49DF9EC22371DF530067E33C /* MainViewController.swift in Sources */,
 				49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */,
 				49DF9EDB23734C310067E33C /* GameViewController.swift in Sources */,
+				49E9E9322379E4AF00F91B64 /* CreateQuestionViewController.swift in Sources */,
 				49DF9ED7237205280067E33C /* LoadImageOperation.swift in Sources */,
 				49F954012378C625002A1AC8 /* RandomQuestionStrategy.swift in Sources */,
 				49DF9EE523749C010067E33C /* GameSession.swift in Sources */,

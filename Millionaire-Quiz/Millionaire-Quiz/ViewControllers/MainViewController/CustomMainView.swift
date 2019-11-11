@@ -15,7 +15,7 @@ class CustomMainView: UIView {
     var startGameButton = UIButton()
     var recordsButton = UIButton()
     var highestScore = UILabel()
-    var segmentedControl = UISegmentedControl()
+    var settingsButton = UIButton()
     
     var imageURL: String = "https://static.1tv.ru/uploads/project/logo_image/2017/08/23/322/_original/322_c144e2880b.png"
     
@@ -30,24 +30,6 @@ class CustomMainView: UIView {
     }
 
     private func configureView() {
-        let items: [String] = ["Последовательно", "Вперемешку"]
-        let segmentedControl = UISegmentedControl(items: items)
-        self.segmentedControl = segmentedControl
-        
-        self.segmentedControl.selectedSegmentIndex = 0
-        self.segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(self.segmentedControl)
-        self.segmentedControl.selectedSegmentTintColor = .darkGray
-        self.segmentedControl.backgroundColor = .black
-        self.segmentedControl.tintColor = .white
-
-        
-        NSLayoutConstraint.activate([
-            self.segmentedControl.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-            self.segmentedControl.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.segmentedControl.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.segmentedControl.heightAnchor.constraint(equalToConstant: 30)
-        ])
         
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.imageView)
@@ -57,7 +39,7 @@ class CustomMainView: UIView {
             self.imageView.widthAnchor.constraint(equalToConstant: 500),
             self.imageView.heightAnchor.constraint(equalToConstant: 300),
             self.imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.imageView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 70)
+            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100)
         ])
         
         self.startGameButton.translatesAutoresizingMaskIntoConstraints = false
@@ -84,12 +66,24 @@ class CustomMainView: UIView {
         
         configButton(button: self.recordsButton, text: "Таблица результатов")
         
+        self.settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.settingsButton)
+        
+        NSLayoutConstraint.activate([
+            self.settingsButton.topAnchor.constraint(equalTo: self.recordsButton.bottomAnchor, constant: 30),
+            self.settingsButton.heightAnchor.constraint(equalToConstant: 60),
+            self.settingsButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 200),
+            self.settingsButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+        ])
+        
+        configButton(button: self.settingsButton, text: "Настройки")
+        
         self.highestScore.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.highestScore)
         
         NSLayoutConstraint.activate([
             self.highestScore.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.highestScore.topAnchor.constraint(lessThanOrEqualTo: self.recordsButton.bottomAnchor, constant: 50),
+            self.highestScore.topAnchor.constraint(lessThanOrEqualTo: self.settingsButton.bottomAnchor, constant: 50),
             self.highestScore.heightAnchor.constraint(equalToConstant: 45),
             self.highestScore.widthAnchor.constraint(greaterThanOrEqualToConstant: 250)
         ])
