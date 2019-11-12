@@ -12,20 +12,6 @@ class SettingsViewController: UIViewController {
     
     var customView = SettingsCustomView()
     
-    private var selectedDifficulty: Difficulty {
-        switch self.customView.segmentedControl.selectedSegmentIndex {
-        case 0:
-            Game.shared.selectedDifficulty = .straightForward
-            return .straightForward
-        case 1:
-            Game.shared.selectedDifficulty = .straightForward
-            return .allRandom
-        default:
-            Game.shared.selectedDifficulty = .straightForward
-            return .straightForward
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -44,10 +30,23 @@ class SettingsViewController: UIViewController {
         ])
         
         self.customView.createQuestionButton.addTarget(self, action: #selector(self.createQuestion), for: .touchUpInside)
+        
+        self.customView.segmentedControl.addTarget(self, action: #selector(segmentedSwitched), for: .valueChanged)
     }
     
     @objc func createQuestion() {
         let createQuestionViewController = CreateQuestionViewController()
         self.navigationController?.pushViewController(createQuestionViewController, animated: true)
+    }
+    
+    @objc func segmentedSwitched() {
+        switch self.customView.segmentedControl.selectedSegmentIndex {
+        case 0:
+            Game.shared.selectedDifficulty = .straightForward
+        case 1:
+            Game.shared.selectedDifficulty = .allRandom
+        default:
+            return
+        }
     }
 }

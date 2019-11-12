@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 protocol GameViewControllerDelegate {
     func didEndGameWithResult(result: Int, date: Date, percent: Float)
@@ -14,11 +15,16 @@ protocol GameViewControllerDelegate {
 
 class GameViewController: UIViewController {
     
+    var infoline: String = ""
+    var percent: Observable<Float> {
+        let floatCount: Float = Float(self.correctAnswers.value)
+        return Observable<Float>( floatCount.rounded() / Float(self.totalQuestions).rounded() * 100)
+    }
     var difficulty: Difficulty
     let totalQuestions: Int = QuestionData.questions.count
     var gameDelegate: GameViewControllerDelegate = Game.shared
     let operationQueue = OperationQueue()
-    var correctAnswers: Int = 0
+    var correctAnswers = Observable<Int>(0)
     let backGroundImageURL: String = "https://wallpaperbro.com/img/570735.jpg"
     var customView = CustomGameView()
     
@@ -56,11 +62,11 @@ class GameViewController: UIViewController {
             self.questions.removeAll { qst -> Bool in
                 return qst.question == self.customView.questionLabel.text
             }
-            self.correctAnswers += 1
+            self.correctAnswers.value += 1
             self.changeQuestion()
         } else {
             sender.backgroundColor = .red
-            guard self.correctAnswers > 0 else {
+            guard self.correctAnswers.value > 0 else {
                 self.saveAndQuit()
                 return
             }
@@ -83,20 +89,23 @@ class GameViewController: UIViewController {
     }
     
     private func saveAndQuit() {
-        var percent: Float = 0
-        guard self.correctAnswers > 0 else {
-            percent = 100
-            self.gameDelegate.didEndGameWithResult(result: self.correctAnswers, date: Date(), percent: percent)
+        guard self.correctAnswers.value > 0 else {
+            self.gameDelegate.didEndGameWithResult(result: self.correctAnswers.value, date: Date(), percent: self.percent.value)
             self.navigationController?.popViewController(animated: true)
             return
         }
-        percent = Float(self.correctAnswers) / Float(self.totalQuestions) * 100
-        self.gameDelegate.didEndGameWithResult(result: self.correctAnswers, date: Date(), percent: percent)
+        self.gameDelegate.didEndGameWithResult(result: self.correctAnswers.value, date: Date(), percent: self.percent.value)
         self.navigationController?.popViewController(animated: true)
     }
     
     private func configureView() {
-
+        
+        self.percent.addObserver(self, options: [.new, .initial]) { [weak self] (percent, _) in
+            self?.customView.infoLabel.text = "Текущий результат: отгадано \(Int(self!.correctAnswers.value)) из \(QuestionData.questions.count) - \(percent)%"
+        }
+        self.correctAnswers.addObserver(self, options: [.new, .initial]) { [weak self] (correct, _) in
+            self?.customView.infoLabel.text = "Текущий результат: отгадано \(correct)) из \(QuestionData.questions.count) - \(self!.percent.value)%"
+        }
         self.customView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(customView)
         
@@ -114,6 +123,7 @@ class GameViewController: UIViewController {
         self.configureButtons()
         self.questions = questionStrategy.createArray(questions: QuestionData.getAllQuestions())
         self.configureQuestion(question: self.questions[0])
+        self.customView.infoLabel.text = "Текущий результат: отгадано \(self.correctAnswers.value) из \(QuestionData.questions.count) - \(self.percent.value)%"
     }
     
     private func configureQuestion(question: Question) {

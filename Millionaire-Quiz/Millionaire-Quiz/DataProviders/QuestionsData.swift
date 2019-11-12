@@ -46,4 +46,16 @@ final class QuestionData {
     static func getAllQuestions() -> [Question] {
         return questions
     }
+    
+    static func duplicateCheck(_ questions: [Question]) -> Bool {
+        var bool: Bool = true
+        for newq in questions {
+            self.questions.forEach { myq in
+                if newq.question == myq.question {
+                    bool = false
+                }
+            }
+        }
+        return bool
+    }
 }

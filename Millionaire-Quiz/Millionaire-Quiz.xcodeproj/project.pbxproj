@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		495488792379FF970026A8B6 /* CreateQuestionCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */; };
+		49D49E95237B4D1300D0BD04 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D49E94237B4D1300D0BD04 /* CustomTableViewCell.swift */; };
+		49D49E98237B581700D0BD04 /* QuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D49E97237B581700D0BD04 /* QuestionBuilder.swift */; };
+		49D49E9B237B63DD00D0BD04 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D49E9A237B63DD00D0BD04 /* Observable.swift */; };
 		49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBD2371DF530067E33C /* AppDelegate.swift */; };
 		49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EBF2371DF530067E33C /* SceneDelegate.swift */; };
 		49DF9EC22371DF530067E33C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF9EC12371DF530067E33C /* MainViewController.swift */; };
@@ -34,7 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionCustomView.swift; sourceTree = "<group>"; };
+		49D49E94237B4D1300D0BD04 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		49D49E97237B581700D0BD04 /* QuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBuilder.swift; sourceTree = "<group>"; };
+		49D49E9A237B63DD00D0BD04 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		49DF9EBA2371DF530067E33C /* Millionaire-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Millionaire-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DF9EBD2371DF530067E33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DF9EBF2371DF530067E33C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,22 @@
 			path = DataProviders;
 			sourceTree = "<group>";
 		};
+		49D49E96237B580600D0BD04 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				49D49E97237B581700D0BD04 /* QuestionBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		49D49E99237B63BC00D0BD04 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				49D49E9A237B63DD00D0BD04 /* Observable.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		49DF9EB12371DF530067E33C = {
 			isa = PBXGroup;
 			children = (
@@ -160,11 +180,13 @@
 			children = (
 				49DF9EBD2371DF530067E33C /* AppDelegate.swift */,
 				49DF9EBF2371DF530067E33C /* SceneDelegate.swift */,
+				49D49E96237B580600D0BD04 /* Builder */,
 				49F953FF2378C5FC002A1AC8 /* Strategy */,
 				490843E62378A8EF0017E4D3 /* ViewControllers */,
 				490843EA2378A9230017E4D3 /* Models */,
 				490843EB2378A92B0017E4D3 /* CustomViews */,
 				490843EC2378A94D0017E4D3 /* DataProviders */,
+				49D49E99237B63BC00D0BD04 /* Foundation */,
 				49DF9EE223749BEB0067E33C /* Game.swift */,
 				49DF9EC92371DF550067E33C /* Assets.xcassets */,
 				49DF9ECB2371DF550067E33C /* LaunchScreen.storyboard */,
@@ -187,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				49E9E9312379E4AF00F91B64 /* CreateQuestionViewController.swift */,
-				495488782379FF970026A8B6 /* CreateQuestionCustomView.swift */,
+				49D49E94237B4D1300D0BD04 /* CustomTableViewCell.swift */,
 			);
 			path = CreateQuestionViewController;
 			sourceTree = "<group>";
@@ -275,9 +297,11 @@
 				49F954052378CF4A002A1AC8 /* QuestionsData.swift in Sources */,
 				49E9E92F2379DE0800F91B64 /* SettingsCustomView.swift in Sources */,
 				49DF9EDD23734C460067E33C /* CustomGameView.swift in Sources */,
+				49D49E98237B581700D0BD04 /* QuestionBuilder.swift in Sources */,
 				49F953FE2378C550002A1AC8 /* Difficulty.swift in Sources */,
 				49DF9ED52371FD140067E33C /* CustomMainView.swift in Sources */,
 				49E9E92D2379DD2800F91B64 /* SettingsViewController.swift in Sources */,
+				49D49E95237B4D1300D0BD04 /* CustomTableViewCell.swift in Sources */,
 				49DF9EC22371DF530067E33C /* MainViewController.swift in Sources */,
 				49DF9EBE2371DF530067E33C /* AppDelegate.swift in Sources */,
 				49DF9EDB23734C310067E33C /* GameViewController.swift in Sources */,
@@ -285,8 +309,8 @@
 				49DF9ED7237205280067E33C /* LoadImageOperation.swift in Sources */,
 				49F954012378C625002A1AC8 /* RandomQuestionStrategy.swift in Sources */,
 				49DF9EE523749C010067E33C /* GameSession.swift in Sources */,
+				49D49E9B237B63DD00D0BD04 /* Observable.swift in Sources */,
 				49DF9EE323749BEC0067E33C /* Game.swift in Sources */,
-				495488792379FF970026A8B6 /* CreateQuestionCustomView.swift in Sources */,
 				49DF9EC82371DF530067E33C /* Millionaire_Quiz.xcdatamodeld in Sources */,
 				49DF9EC02371DF530067E33C /* SceneDelegate.swift in Sources */,
 				49DF9EDF2373553C0067E33C /* RecordsViewController.swift in Sources */,

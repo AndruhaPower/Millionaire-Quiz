@@ -9,7 +9,8 @@
 import UIKit
 
 class CustomGameView: UIView {
-
+    
+    var infoLabel = UILabel()
     var backgroundQuestionView = UIView()
     var questionLabel = UILabel()
     var answerOneButton = CustomAnswerButton()
@@ -30,12 +31,28 @@ class CustomGameView: UIView {
     }
     
     private func configureView() {
-
+        
+        self.infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(self.infoLabel)
+        
+        NSLayoutConstraint.activate([
+            self.infoLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 150),
+            self.infoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.infoLabel.widthAnchor.constraint(equalToConstant: 400),
+            self.infoLabel.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        self.infoLabel.backgroundColor = .black
+        self.infoLabel.alpha = 0.4
+        self.infoLabel.font = UIFont(name: "GillSans-Bold", size: 15)
+        self.infoLabel.textColor = .white
+        self.infoLabel.textAlignment = .center
+        
         self.backgroundQuestionView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.backgroundQuestionView)
         
         NSLayoutConstraint.activate([
-            self.backgroundQuestionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 150),
+            self.backgroundQuestionView.topAnchor.constraint(equalTo: self.infoLabel.bottomAnchor, constant: 20),
             self.backgroundQuestionView.widthAnchor.constraint(equalToConstant: 400),
             self.backgroundQuestionView.heightAnchor.constraint(equalToConstant: 300),
             self.backgroundQuestionView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
@@ -68,7 +85,7 @@ class CustomGameView: UIView {
         self.addSubview(self.answerOneButton)
         
         NSLayoutConstraint.activate([
-            self.answerOneButton.topAnchor.constraint(equalTo: self.backgroundQuestionView.bottomAnchor, constant: 150),
+            self.answerOneButton.topAnchor.constraint(equalTo: self.backgroundQuestionView.bottomAnchor, constant: 75),
             self.answerOneButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 2.5),
             self.answerOneButton.widthAnchor.constraint(equalToConstant: self.buttonWidth),
             self.answerOneButton.heightAnchor.constraint(equalToConstant: 75)
@@ -79,7 +96,7 @@ class CustomGameView: UIView {
         
         NSLayoutConstraint.activate([
             self.answerTwoButton.leadingAnchor.constraint(equalTo: self.answerOneButton.trailingAnchor, constant: 10),
-            self.answerTwoButton.topAnchor.constraint(equalTo: self.backgroundQuestionView.bottomAnchor, constant: 150),
+            self.answerTwoButton.topAnchor.constraint(equalTo: self.backgroundQuestionView.bottomAnchor, constant: 75),
             self.answerTwoButton.widthAnchor.constraint(equalToConstant: self.buttonWidth),
             self.answerTwoButton.heightAnchor.constraint(equalToConstant: 75)
         ])
